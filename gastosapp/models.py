@@ -6,7 +6,6 @@ class Gastos(models.Model):
     descripcion = models.TextField(blank=True)
     fecha = models.DateField()
     monto = models.IntegerField()
-    done = models.BooleanField(default=False)
     
     def __str__(self) -> str:
         return self.titulo

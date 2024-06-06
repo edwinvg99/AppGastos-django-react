@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-@+o3jm6tp78p5!j_*a@(c-z)cdr7ivk1y#-=dyv=a0%7r_6ozx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'web-production-0ff5.up.railway.app']
+ALLOWED_HOSTS = ['localhost',  '127.0.0.1','web-production-0ff5.up.railway.app']
+
 
 
 # Application definition
@@ -82,9 +83,11 @@ WSGI_APPLICATION = 'django_crud_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
-    "default": dj_database_url.config(default="sqlite://db.sqlite3")
+    "default": dj_database_url.config(default="sqlite:///db.sqlite3")
 }
+
 
 
 # Password validation
@@ -121,7 +124,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
@@ -131,6 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # AUTORIZACION DE CONECCION
 CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
