@@ -17,7 +17,7 @@ git clone https://github.com/edwinvg99/Gastos-Django-React.git
 
 2: Configura el backend (Django):
 
-cd backend
+cd backend (django_crud_api)
 # Crea y activa un entorno virtual (recomendado)
 python -m venv env
 source env/bin/activate  # en Linux/macOS
@@ -30,23 +30,20 @@ cp .env.example .env
 python manage.py migrate
 
 
+Inicia el servidor Django (backend):
+python manage.py runserver
+
+
 3: Configura el frontend (React):
 
-cd frontend
+cd frontend (client)
 # Instala las dependencias
 npm install
 
 
-Ejecutar la aplicación localmente
-Inicia el servidor Django (backend):
-
-cd backend
-python manage.py runserver
-
 Inicia el servidor de desarrollo de React (frontend):
 
-cd frontend
-npm start
+npm run dev
 
 Contribución
 ¡Gracias por considerar contribuir a GastosApp! Si deseas enviar una solicitud de extracción (pull request), asegúrate de seguir estas pautas:
